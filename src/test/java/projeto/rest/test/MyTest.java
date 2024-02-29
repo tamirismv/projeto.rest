@@ -1,8 +1,8 @@
 package projeto.rest.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -14,7 +14,7 @@ public class MyTest {
 	@Test
 	public void validarLista() {
 		response = RestAssured.get("https://reqres.in/api/users?page=2");
-		assertEquals(200, response.statusCode());
+		assertEquals(response.statusCode(),200);
 
 	}
 
